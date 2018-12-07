@@ -1,10 +1,11 @@
 package Boxes;
-
-public abstract class MBox {
+import ImplementationOfClasses.Maze;
+public abstract class MBox implements Interfaces.VertexInterface{
 	private int x; 
 	private int y;
-	public MBox(int x, int y) {
-		this.x=x;this.y=y;
+	private Maze maze; 
+	public MBox(int x, int y, Maze maze) {
+		this.x=x;this.y=y;this.maze=maze;
 	}
 	public int getX() {
 		return x;
@@ -12,5 +13,8 @@ public abstract class MBox {
 	public int getY() {
 		return y;
 	}	
+	public String getLabel() {
+		return "M";
+	}
 
 }
